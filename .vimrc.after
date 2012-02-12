@@ -1,6 +1,3 @@
-" Remap Leader
-let mapleader=','
-
 " Ctrl-Shift-O to mirror NerdTree
 map <D-O> :NERDTreeMirror<CR>
 
