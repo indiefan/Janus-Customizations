@@ -1,1 +1,48 @@
-/Users/marek/.vimrc.after
+" Remap Leader
+let mapleader=','
+
+" Ctrl-Shift-O to mirror NerdTree
+map <D-O> :NERDTreeMirror<CR>
+
+" Tab changes (4 space tabs)
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set noexpandtab
+
+" Cmd-Enter and Cmd-Shift-Enter shortcuts for finishing a line mid-edit
+inoremap <D-CR> <Esc>o
+inoremap <D-C-CR>  <Esc>A;<CR> <BS>
+
+" Move swp and temp files to ~/.vimtmp
+set backupdir=~/.vimtmp
+set directory=~/.vimtmp
+
+" Change color
+color ryderbeans
+
+" Chaning splits
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+inoremap <C-h> <Esc><C-w>h
+inoremap <C-j> <Esc><C-w>j
+inoremap <C-k> <Esc><C-w>k
+inoremap <C-l> <Esc><C-w>l
+
+" Only auto complete braces
+let g:AutoClosePairs = {'{':'}'}
+inoremap <C-D-[>    <Esc>A{<CR>
+
+" Keep visual block selection after changing indent with < or >
+vmap > >gv
+vmap < <gv
+
+" Keep all splits the same size
+set equalalways
+
+" Use arrows in nerdtree, but don't open on click
+let NERDTreeDirArrows = 1
+let NERDTreeMouseMode = 2

@@ -1,1 +1,11 @@
-/Users/marek/.gvimrc.after
+" Set the default Font
+set guifont=Bitstream\ Vera\ Sans\ Mono:h8
+
+" Always show the tab bar
+set showtabline=2
+
+" Don't highlight tabs
+set nolist
+
+" Change color scheme
+color ryderbeans
