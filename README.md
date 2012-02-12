@@ -1,8 +1,15 @@
 # Janus Customizations
 
-Local customizations used for my personal Janus install.
+Local customizations used for my personal [Janus](https://github.com/carlhuda/janus) installation.
 
 ## Installation
+
+Unlike the main Janus project, this project is meant to be forked and
+customized. To maintain your own local configuations project, just
+fork this project, modify the config files where appropriate, and update
+the installation process to be specific to your fork.
+
+### Installation Process
 
 To install Janus-Customizations, simply run the following command (any
 existing local customizations will be backed up prior to installation)
