@@ -48,3 +48,6 @@ let NERDTreeMouseMode = 2
 if has("gui_running")
 	set guioptions-=T
 endif
+
+" Show hidden files in nerdtree by default
+let NERDTreeShowHidden=1
