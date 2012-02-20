@@ -5,7 +5,7 @@ function die()
 }
 
 # Add <strong>.old</strong> to any existing Janus Customization file file in the home directory
-for i in $HOME/.janus-customizations $HOME/.janus $HOME/.vimrc.after $HOME/.gvimrc.after; do
+for i in $HOME/.janus-customizations $HOME/.janus $HOME/.vimrc.after $HOME/.vimrc.before $HOME/.gvimrc.after; do
 	if [[ ( -e $i ) || ( -h $i ) ]]; then
 		echo "${i} has been renamed to ${i}.old"
 		mv "${i}" "${i}.old" || die "Could not move ${i} to ${i}.old"
@@ -20,3 +20,4 @@ git clone https://github.com/indiefan/Janus-Customizations.git $HOME/.janus-cust
 ln -s $HOME/.janus-customizations/.janus $HOME/.janus
 ln -s $HOME/.janus-customizations/.gvimrc.after $HOME/.gvimrc.after
 ln -s $HOME/.janus-customizations/.vimrc.after $HOME/.vimrc.after
+ln -s $HOME/.janus-customizations/.vimrc.before $HOME/.vimrc.before

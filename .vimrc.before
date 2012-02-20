@@ -1,0 +1,2 @@
+" Disable gundo plugin because it conflicts with debugger
+call janus#disable_plugin('gundo')
