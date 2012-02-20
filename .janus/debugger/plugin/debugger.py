@@ -438,7 +438,7 @@ class DebugUI:
     self.line     = None
     self.winbuf   = {}
     self.cursign  = None
-    self.sessfile = "/tmp/debugger_vim_saved_session." + str(os.getpid())
+    self.sessname = str(os.getpid())
     self.minibufexpl = minibufexpl
 
   def debug_mode(self):
@@ -449,7 +449,7 @@ class DebugUI:
     if self.minibufexpl == 1:
       vim.command('CMiniBufExplorer')         # close minibufexplorer if it is open
     # save session
-    vim.command('mksession! ' + self.sessfile)
+    vim.command('SaveSession! ' + self.sessname)
     for i in range(1, len(vim.windows)+1):
       vim.command(str(i)+'wincmd w')
       self.winbuf[i] = vim.eval('bufnr("%")') # save buffer number, mksession does not do job perfectly
@@ -477,8 +477,10 @@ class DebugUI:
     self.destroy()
 
     # restore session
-    vim.command('source ' + self.sessfile)
-    os.system('rm -f ' + self.sessfile)
+    vim.command('SaveSession! trash')
+    vim.command('OpenSession! ' + self.sessname)
+    vim.command('DeleteSession! trash')
+    #os.system('rm -f ' + self.sessfile)
 
     self.set_highlight()
 
