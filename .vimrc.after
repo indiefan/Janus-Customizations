@@ -5,7 +5,9 @@ map <D-O> :NERDTreeMirror<CR>
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set noexpandtab
+"set expandtab
+
+au FileType php setl noexpandtab
 
 " Cmd-Enter and Cmd-Shift-Enter shortcuts for finishing a line mid-edit
 inoremap <D-CR> <Esc>o
