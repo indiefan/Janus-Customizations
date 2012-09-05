@@ -8,6 +8,7 @@ set softtabstop=4
 "set expandtab
 
 au FileType php setl noexpandtab
+au BufRead,BufNewFile *.go set filetype=go
 
 " Cmd-Enter and Cmd-Shift-Enter shortcuts for finishing a line mid-edit
 inoremap <D-CR> <Esc>o
@@ -53,3 +54,8 @@ endif
 
 " Show hidden files in nerdtree by default
 let NERDTreeShowHidden=1
+
+set tw=0
+set guifont=Bitstream\ Vera\ Sans\ Mono:h8
+set background=dark
+color solarized

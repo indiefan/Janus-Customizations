@@ -7,5 +7,5 @@ set showtabline=2
 " Don't highlight tabs
 set nolist
 
-" Change color scheme
-color ryderbeans
+set background=dark
+set tw=0
