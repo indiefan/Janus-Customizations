@@ -2,10 +2,10 @@
 map <D-O> :NERDTreeMirror<CR>
 
 " Tab changes (4 space tabs)
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-"set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 
 au FileType php setl noexpandtab
 au BufRead,BufNewFile *.go set filetype=go
@@ -19,18 +19,20 @@ set backupdir=~/.vimtmp
 set directory=~/.vimtmp
 
 " Change color
-color ryderbeans
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Chaning splits
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
+"noremap <C-h> <C-w>h
+"noremap <C-j> <C-w>j
+"noremap <C-k> <C-w>k
+"noremap <C-l> <C-w>l
 
-inoremap <C-h> <Esc><C-w>h
-inoremap <C-j> <Esc><C-w>j
-inoremap <C-k> <Esc><C-w>k
-inoremap <C-l> <Esc><C-w>l
+"inoremap <C-h> <Esc><C-w>h
+"inoremap <C-j> <Esc><C-w>j
+"inoremap <C-k> <Esc><C-w>k
+"inoremap <C-l> <Esc><C-w>l
 
 " Only auto complete braces
 let g:AutoClosePairs = {'{':'}'}
@@ -59,3 +61,6 @@ set tw=0
 set guifont=Bitstream\ Vera\ Sans\ Mono:h8
 set background=dark
 color solarized
+
+" Ctrlp root markers
+let g:ctrlp_root_markers=['.ctrlp']
